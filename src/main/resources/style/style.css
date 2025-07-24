@@ -1,0 +1,142 @@
+/* ───────── PALETA & BASE ───────── */
+:root {
+    -fx-font-family: "Oswald";
+    -fx-font-size: 14px;
+    -fx-background-color: #1c1f2a;
+    -fx-text-fill: white;
+}
+
+/* ───────── CONTAINERS ───────── */
+.root, .anchor-pane {
+    -fx-background-color: #1c1f2a;
+}
+
+/* ───────── TITLES E LABELS ───────── */
+.mainLabel, .regLabel {
+    -fx-text-fill: white;
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+}
+
+.loginLabel {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* ───────── MENSAGENS DE ERRO ───────── */
+#errorLabel, .errorLabel {
+    -fx-text-fill: #ff6b6b;
+    -fx-font-weight: bold;
+}
+
+/* ───────── INPUTS ───────── */
+.text-field, .password-field {
+    -fx-background-color: #2f3242;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #bbbbbb;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12;
+    -fx-border-color: transparent;
+}
+
+/* ───────── BOTÕES ───────── */
+.button, .primary-button, .bar-button, .regBackBtn {
+    -fx-background-color: #3c4055;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 6 12;
+}
+
+.button:hover, .primary-button:hover, .bar-button:hover, .regBackBtn:hover {
+    -fx-background-color: #4e526d;
+}
+
+/* Botão transparente da title bar */
+.bar-button, .regBackBtn {
+    -fx-background-color: transparent;
+    -fx-padding: 0 10;
+}
+
+/* ───────── BARRA SUPERIOR ───────── */
+.custom-bar {
+    -fx-background-color: #2a2d3e;
+    -fx-padding: 8 16;
+    -fx-spacing: 10;
+    -fx-border-color: #3e4160;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Título da barra */
+.bar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-family: "Oswald";
+    -fx-font-weight: bold;
+}
+
+/* ───────── TABELA DE PRODUTOS ───────── */
+.table-view {
+    -fx-background-color: #161922;
+    -fx-control-inner-background: #161922;
+    -fx-text-fill: white;
+    -fx-table-cell-border-color: #2f3242;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3c4055;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #3c4055;
+}
+
+.table-row-cell:filled:selected, .table-row-cell:focused:selected,
+.table-cell:selected {
+    -fx-background-color: #006699;
+    -fx-text-fill: white;
+    -fx-border-color: #2f3242;
+}
+
+/* ───────── SCROLLBAR ───────── */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #2f3242;
+    -fx-background-radius: 6;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #1c1f2a;
+}
+
+/* ───────── ALERTAS ───────── */
+.custom-alert {
+    -fx-background-color: #1c1f2a;
+}
+
+.custom-alert .content.label {
+    -fx-text-fill: white;
+}
+
+.custom-alert .button {
+    -fx-background-color: #3c4055;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

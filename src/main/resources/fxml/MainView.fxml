@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500" prefWidth="800"
+            stylesheets="/style/style.css"
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            fx:controller="br.com.michael.productsmanager.controller.MainViewController">
+
+    <!-- Barra de Título -->
+    <HBox fx:id="customTitleBar"
+          prefHeight="40" prefWidth="800"
+          spacing="10" alignment="CENTER_LEFT"
+          styleClass="custom-bar">
+
+        <Button fx:id="logoutButton" text="Voltar"
+                onAction="#logout" styleClass="bar-button" />
+
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label styleClass="bar-title" text="Gerenciador de Produtos"/>
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <Button fx:id="minimizeButton"
+                text="—"
+                onMouseClicked="#minimizeWindow"
+                styleClass="bar-button" />
+        <Button fx:id="closeButton"
+                text="X"
+                onMouseClicked="#closeApplication"
+                styleClass="bar-button" />
+    </HBox>
+
+    <!-- Conteúdo principal -->
+    <VBox spacing="10"
+          AnchorPane.topAnchor="60"
+          AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20"
+          AnchorPane.bottomAnchor="20"
+          prefWidth="760">
+
+        <!-- Formulário de Produto -->
+        <HBox spacing="10">
+            <VBox spacing="5">
+                <Label text="Nome do Produto"/>
+                <TextField fx:id="prodName" promptText="Nome"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label text="Preço do Produto"/>
+                <TextField fx:id="prodPrice" promptText="R$0,00"/>
+            </VBox>
+            <VBox spacing="5" prefWidth="300">
+                <Label text="Descrição do Produto"/>
+                <TextField fx:id="prodDescription" promptText="Descrição"/>
+            </VBox>
+        </HBox>
+
+        <!-- Botões de ação e busca -->
+        <HBox spacing="10">
+            <Button fx:id="addButton" text="Adicionar"
+                    onMouseClicked="#addProductButton"
+                    styleClass="primary-button" />
+            <Button fx:id="updateButton" text="Atualizar"
+                    onMouseClicked="#updateProductButton"
+                    styleClass="primary-button" />
+            <Button fx:id="deleteButton" text="Deletar"
+                    onMouseClicked="#deleteSelectedProduct"
+                    styleClass="primary-button" />
+            <Button fx:id="clearFieldsButton" text="Limpar"
+                    onMouseClicked="#clearFields"
+                    styleClass="primary-button" />
+
+            <Label text="Buscar" translateY="3"/>
+            <TextField fx:id="searchField" prefWidth="181" promptText="Nome ou descrição"/>
+        </HBox>
+
+        <!-- Tabela de Produtos -->
+        <TableView fx:id="productsTable" prefHeight="300" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colName" text="Nome" prefWidth="200"/>
+                <TableColumn fx:id="colPrice" text="Preço" prefWidth="100"/>
+                <TableColumn fx:id="colDescription" text="Descrição" prefWidth="458"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

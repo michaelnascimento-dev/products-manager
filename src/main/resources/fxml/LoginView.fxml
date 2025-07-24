@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="br.com.michael.productsmanager.controller.LoginController"
+            prefWidth="400" prefHeight="350"
+            stylesheets="/style/style.css">
+
+    <!-- Barra personalizada -->
+    <HBox fx:id="customTitleBar"
+          prefHeight="30"
+          AnchorPane.topAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0"
+          alignment="CENTER_RIGHT"
+          spacing="5">
+
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="minimizeBtn" text="—" styleClass="regBackBtn"/>
+        <Button fx:id="closeBtn" text="X" styleClass="regBackBtn"/>
+    </HBox>
+
+    <!-- Área de login -->
+    <VBox spacing="30"
+          alignment="CENTER"
+          prefWidth="300" prefHeight="250"
+          AnchorPane.topAnchor="50"
+          AnchorPane.leftAnchor="50"
+          AnchorPane.rightAnchor="50">
+
+        <Label text="Gerenciador de Produtos" styleClass="mainLabel"/>
+        <Label text="Login" styleClass="loginLabel" translateY="1"/>
+
+        <!-- Campos de entrada -->
+        <TextField fx:id="usernameField" promptText="Usuário" prefWidth="250"/>
+        <PasswordField fx:id="passwordField" promptText="Senha" prefWidth="250"/>
+
+        <!-- Ações -->
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="loginButton" text="Entrar"
+                    prefWidth="100" onMouseClicked="#login"/>
+            <Button fx:id="registerButton" text="Cadastrar"
+                    prefWidth="100" onMouseClicked="#openRegisterView"/>
+        </HBox>
+
+        <!-- Feedback -->
+        <Label fx:id="errorLabel"/>
+    </VBox>
+</AnchorPane>

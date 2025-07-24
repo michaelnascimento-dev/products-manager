@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.michael.productsmanager.controller.RegisterController"
+            prefHeight="360" prefWidth="403"
+            stylesheets="/style/style.css">
+
+    <!-- Barra personalizada -->
+    <HBox fx:id="customTitleBar"
+          alignment="CENTER_RIGHT"
+          prefHeight="30" prefWidth="403"
+          spacing="5">
+
+        <Button fx:id="btnGoToLogin" text="Voltar"
+                minWidth="80"
+                styleClass="regBackBtn"
+                onMouseClicked="#goToLogin" />
+
+        <Pane HBox.hgrow="ALWAYS" />
+
+        <Button fx:id="minimizeBtn" text="—"
+                focusTraversable="false"
+                styleClass="regBackBtn" />
+        <Button fx:id="closeBtn" text="X"
+                focusTraversable="false"
+                styleClass="regBackBtn" />
+    </HBox>
+
+    <!-- Formulário de cadastro -->
+    <VBox spacing="25"
+          prefWidth="300"
+          layoutX="50" layoutY="60">
+
+        <Label text="Cadastro de Usuário" styleClass="regLabel" />
+
+        <TextField fx:id="usernameField" promptText="Usuário" />
+        <PasswordField fx:id="passwordField" promptText="Senha" />
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirmar Senha" />
+
+        <Button text="Registrar" onAction="#register" />
+
+        <Label fx:id="messageLabel" />
+    </VBox>
+</AnchorPane>
