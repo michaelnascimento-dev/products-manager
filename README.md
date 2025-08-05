@@ -1,4 +1,3 @@
-
 # 🛒 Products Manager
 
 Aplicação Java Desktop para gerenciamento de produtos, com autenticação de usuários, construída com JavaFX, JPA (Hibernate), MySQL, Maven e seguindo os padrões **MVC + DAO**.
@@ -10,6 +9,19 @@ Aplicação Java Desktop para gerenciamento de produtos, com autenticação de u
 O **Products Manager** é um projeto CRUD simples, com interface gráfica, criado para colocar em prática os conhecimentos adquiridos durante a faculdade e estudos complementares em Java. Seu principal objetivo é demonstrar domínio de boas práticas, arquitetura de software e integração com banco de dados em uma aplicação real.
 
 O projeto inclui autenticação de usuários com senha criptografada (BCrypt), persistência de dados com JPA/Hibernate e uma interface em JavaFX para realizar operações com produtos.
+
+---
+
+## 🖼️ Screenshots
+
+### 🔐 LoginView
+![LoginView](assets/LoginView.png)
+
+### 🧾 RegisterView
+![RegisterView](assets/RegisterView.png)
+
+### 📋 MainView
+![MainView](assets/MainView.png)
 
 ---
 
