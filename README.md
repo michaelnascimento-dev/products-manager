@@ -25,25 +25,21 @@ O projeto inclui autenticação de usuários com senha criptografada (BCrypt), p
 
 ---
 
-## 🧪 Como testar o projeto
+## 💻 Como executar
 
-1. **Configure o banco de dados:**
-   - Abra o arquivo `script.sql`, localizado na pasta `/sql`.
-   - Execute esse script no seu MySQL Workbench para criar o banco `pm_appdb`.
+**Instale o Docker e Docker Compose, caso ainda não os possua.**
 
-2. **Configure suas credenciais:**
-   - No arquivo `database.properties`, localizado na pasta `src/main/resources`, preencha os seguintes campos com suas informações:
-     ```properties
-     db.url=jdbc:mysql://localhost:3306/pm_appdb
-     db.user= (Insira seu usuário aqui)
-     db.password= (Insira sua senha aqui)
-     ```
+Na raiz do projeto, execute:
 
-3. **Execute o projeto:**
-   - Rode a classe `Main.java`, que está em:
-     ```
-     src/main/java/br/com/michael/productsmanager/view/Main.java
-     ```
+`docker compose up -d`
+
+**O container iniciará um banco MySQL na porta 3307 e criará o banco pm_appdb utilizando o script localizado em /sql.**
+
+Execute o projeto:
+
+Rode a classe `Main.java`, localizada em:
+
+`src/main/java/br/com/michael/productsmanager/view/Main.java`
 
 ---
 
@@ -80,9 +76,7 @@ O projeto inclui autenticação de usuários com senha criptografada (BCrypt), p
 
 ## 🚧 Próximas melhorias (roadmap)
 
-- Adicionar suporte a banco de dados em **Docker**.
 - Gerar um instalador da aplicação com **JPackage**.
-- Criar modo "demo" com banco de dados embutido para facilitar testes.
 - Melhorar o layout e a experiência visual da interface.
 
 ---
@@ -96,10 +90,4 @@ Desenvolvido por **Michael Nascimento** — estudante de Análise e Desenvolvime
 
 ---
 
-## ⚠️ Aviso
-
-Este projeto foi criado com fins educacionais e para compor meu portfólio. Uso de **GitHub Copilot** e **ChatGPT** auxiliou na refatoração, otimização e documentação do código.
-
----
-
-⭐ Se você gostou do projeto, considere deixar uma estrela!
+⭐ **Se você gostou do projeto, considere deixar uma estrela!**
