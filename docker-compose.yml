@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_pm
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: demo
+      MYSQL_DATABASE: pm_appdb
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./sql/database.sql:/docker-entrypoint-initdb.d/init.sql
